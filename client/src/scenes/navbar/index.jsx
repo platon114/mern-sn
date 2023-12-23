@@ -43,6 +43,14 @@ const Navbar = () => {
 
     const fullName = `${user.firstName} ${user.lastName}`;
 
+    const handleLogout = () => {
+        // Действия, которые вы хотите выполнить перед выходом
+        dispatch(setLogout());
+
+        // Переход на главную страницу после выхода
+        navigate("/");
+    };
+
     return (
         <FlexBetween padding="1rem 6%" backgroundColor={alt}>
             <FlexBetween gap="1.75rem">
@@ -148,7 +156,7 @@ const Navbar = () => {
                         </IconButton>
                         <Notifications sx={{ fontSize: "25px" }} />
                         <Help sx={{ fontSize: "25px" }} />
-                        <Button sx={{ fontSize: "15px" }} onClick={() => dispatch(setLogout())}>Выход</Button>
+                        <Button sx={{ fontSize: "15px" }} onClick={handleLogout}>Выход</Button>
                     </FlexBetween>
                 </Box>
             )}
