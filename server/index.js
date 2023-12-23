@@ -60,11 +60,11 @@ app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 app.use("/conversations", conversationRoutes);
 app.use("/messages", messageRoutes);
-
+const MONGO_URL='mongodb+srv://platontty:humus@cluster0.zrerumx.mongodb.net/social_network?retryWrites=true&w=majority'
 /* MONGOOSE SETUP */
-const PORT = process.env.PORT || 6001;
+const PORT = 3001;
 mongoose
-    .connect(process.env.MONGO_URL, {
+    .connect(MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
