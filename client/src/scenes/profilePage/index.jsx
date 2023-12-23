@@ -20,7 +20,7 @@ const ProfilePage = () => {
     const dispatch = useDispatch();
 
     const getUser = async () => {
-        const response = await fetch(`http://localhost:3001/users/${profileUserId}`, {
+        const response = await fetch(`https://mern-snsv.onrender.com/users/${profileUserId}`, {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
         });

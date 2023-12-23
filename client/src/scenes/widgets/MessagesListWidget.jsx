@@ -29,7 +29,7 @@ const MessagesListWidget = ({ userId }) => {
         // Fetch conversations from the server using the token and userId
         const getMessages = async () => {
             try {
-                const response = await fetch(`http://localhost:3001/messages/getMessages/${conversation._id}`, {
+                const response = await fetch(`https://mern-snsv.onrender.com/messages/getMessages/${conversation._id}`, {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -56,7 +56,7 @@ const MessagesListWidget = ({ userId }) => {
 
     const getUser = async (senderId) => {
         try {
-            const response = await fetch(`http://localhost:3001/users/${senderId}`, {
+            const response = await fetch(`https://mern-snsv.onrender.com/users/${senderId}`, {
                 method: "GET",
                 headers: { Authorization: `Bearer ${token}` },
             });

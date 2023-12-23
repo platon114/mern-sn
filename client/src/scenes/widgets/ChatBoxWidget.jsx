@@ -47,7 +47,7 @@ const ChatBoxWidget = () => {
             if (arrivalMessage && conversation?.members.includes(arrivalMessage.sender)) {
                 try {
                     const response = await fetch(
-                        `http://localhost:3001/messages/getMessages/${conversation._id}`,
+                        `https://mern-snsv.onrender.com/messages/getMessages/${conversation._id}`,
                         {
                             method: "GET",
                             headers: {
@@ -94,7 +94,7 @@ const ChatBoxWidget = () => {
             });
 
             const response = await fetch(
-                `http://localhost:3001/messages/createMessage`,
+                `https://mern-snsv.onrender.com/messages/createMessage`,
                 {
                     method: "POST",
                     headers: {
@@ -111,7 +111,7 @@ const ChatBoxWidget = () => {
             }
 
             const response2 = await fetch(
-                `http://localhost:3001/messages/getMessages/${conversation._id}`,
+                `https://mern-snsv.onrender.com/messages/getMessages/${conversation._id}`,
                 {
                     method: "GET",
                     headers: {

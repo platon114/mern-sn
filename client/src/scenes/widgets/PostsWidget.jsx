@@ -12,9 +12,9 @@ const PostsWidget = ({ userId, isProfile = false, searchText }) => {
   
   const fetchPosts = async () => {
     setIsLoading(true);
-    let url = `http://localhost:3001/posts?page=${pageNumber}`;
+    let url = `https://mern-snsv.onrender.com/posts?page=${pageNumber}`;
     if (isProfile) {
-      url = `http://localhost:3001/posts/${userId}/posts?page=${pageNumber}`;
+      url = `https://mern-snsv.onrender.com/posts/${userId}/posts?page=${pageNumber}`;
     }
 
     const response = await fetch(url, {
