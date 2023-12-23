@@ -33,7 +33,7 @@ app.use(morgan("common"));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(cors({
-    origin: "http://localhost:3000",  // Replace with your frontend's URL
+    origin: "https://65872e001eb607b997c8b6e5--resplendent-snickerdoodle-be0132.netlify.app",  // Replace with your frontend's URL
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
 }));
