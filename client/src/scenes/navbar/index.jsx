@@ -45,10 +45,11 @@ const Navbar = () => {
 
     const handleLogout = () => {
         // Действия, которые вы хотите выполнить перед выходом
+        navigate("/");
         dispatch(setLogout());
 
         // Переход на главную страницу после выхода
-        navigate("/");
+     
     };
 
     return (

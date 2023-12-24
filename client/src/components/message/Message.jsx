@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import { format } from "timeago.js";
+
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -14,7 +14,7 @@ const Message = ({ message, own }) => {
                 
                 <p className="messageText">{message.text}</p>
             </div>
-            <div className="messageBottom">{format(message.createdAt)}</div>
+         
         </div>
     );
 };
