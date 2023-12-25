@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="app">
-      <BrowserRouter>
+      <BrowserRouter basename="/tothepoint_login">
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
